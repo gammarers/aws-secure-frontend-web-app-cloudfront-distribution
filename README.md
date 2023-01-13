@@ -21,9 +21,9 @@ npm install @yicr/secure-frontend-web-app-cloudfront-distribution
 ```
 
 ```typescript
-import { FrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution';
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution';
 
-new FrontendWebAppCloudFrontDistribution(stack, 'FrontendWebAppCloudFrontDistribution', {
+new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
   accessLogBucket: new s3.Bucket(stack, 'LogBucket'),
   certificate: new acm.Certificate(stack, 'Certificate', {
     domainName: 'example.com',
