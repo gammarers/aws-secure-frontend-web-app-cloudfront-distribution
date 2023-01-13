@@ -3,12 +3,12 @@ import { Match, Template } from 'aws-cdk-lib/assertions';
 import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-import { FrontendWebAppCloudFrontDistribution } from '../src';
+import { SecureFrontendWebAppCloudFrontDistribution } from '../src';
 
 it('Has Cloudfront Distribution', () => {
   const app = new App();
   const stack = new Stack(app, 'TestingStack');
-  new FrontendWebAppCloudFrontDistribution(stack, 'FrontendWebAppCloudFrontDistribution', {
+  new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
     accessLogBucket: new s3.Bucket(stack, 'LogBucket'),
     certificate: new acm.Certificate(stack, 'Certificate', {
       domainName: 'example.com',

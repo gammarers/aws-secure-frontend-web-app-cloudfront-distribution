@@ -5,7 +5,7 @@ import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 
-export interface FrontendWebAppCloudFrontDistributionProps {
+export interface SecureFrontendWebAppCloudFrontDistributionProps {
   readonly distributionComment?: string;
   readonly distributionDomainName: string;
   readonly certificate: acm.ICertificate;
@@ -14,11 +14,11 @@ export interface FrontendWebAppCloudFrontDistributionProps {
   readonly accessLogBucket: s3.IBucket;
 }
 
-export class FrontendWebAppCloudFrontDistribution extends Construct {
+export class SecureFrontendWebAppCloudFrontDistribution extends Construct {
 
   public distribution: cloudfront.Distribution;
 
-  constructor(scope: Construct, id: string, props: FrontendWebAppCloudFrontDistributionProps) {
+  constructor(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionProps) {
     super(scope, id);
 
     // 👇Create CloudFront distribution
