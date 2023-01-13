@@ -2,39 +2,39 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### FrontendWebAppCloudFrontDistribution <a name="FrontendWebAppCloudFrontDistribution" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution"></a>
+### SecureFrontendWebAppCloudFrontDistribution <a name="SecureFrontendWebAppCloudFrontDistribution" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution"></a>
 
-#### Initializers <a name="Initializers" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer"></a>
+#### Initializers <a name="Initializers" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer"></a>
 
 ```typescript
-import { FrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
 
-new FrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: FrontendWebAppCloudFrontDistributionProps)
+new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps">FrontendWebAppCloudFrontDistributionProps</a></code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps">FrontendWebAppCloudFrontDistributionProps</a>
+- *Type:* <a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a>
 
 ---
 
@@ -42,11 +42,11 @@ new FrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: Fr
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.toString"></a>
+##### `toString` <a name="toString" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString"></a>
 
 ```typescript
 public toString(): string
@@ -58,21 +58,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct"></a>
 
 ```typescript
-import { FrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
 
-FrontendWebAppCloudFrontDistribution.isConstruct(x: any)
+SecureFrontendWebAppCloudFrontDistribution.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -84,12 +84,12 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.Distribution</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.Distribution</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -101,7 +101,7 @@ The tree node.
 
 ---
 
-##### `distribution`<sup>Required</sup> <a name="distribution" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistribution.property.distribution"></a>
+##### `distribution`<sup>Required</sup> <a name="distribution" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distribution"></a>
 
 ```typescript
 public readonly distribution: Distribution;
@@ -114,30 +114,30 @@ public readonly distribution: Distribution;
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### FrontendWebAppCloudFrontDistributionProps <a name="FrontendWebAppCloudFrontDistributionProps" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps"></a>
+### SecureFrontendWebAppCloudFrontDistributionProps <a name="SecureFrontendWebAppCloudFrontDistributionProps" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps"></a>
 
-#### Initializer <a name="Initializer" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.Initializer"></a>
 
 ```typescript
-import { FrontendWebAppCloudFrontDistributionProps } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistributionProps } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
 
-const frontendWebAppCloudFrontDistributionProps: FrontendWebAppCloudFrontDistributionProps = { ... }
+const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloudFrontDistributionProps = { ... }
 ```
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.distributionDomainName">distributionDomainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.distributionComment">distributionComment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.distributionDomainName">distributionDomainName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.distributionComment">distributionComment</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `accessLogBucket`<sup>Required</sup> <a name="accessLogBucket" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
+##### `accessLogBucket`<sup>Required</sup> <a name="accessLogBucket" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
 
 ```typescript
 public readonly accessLogBucket: IBucket;
@@ -147,7 +147,7 @@ public readonly accessLogBucket: IBucket;
 
 ---
 
-##### `certificate`<sup>Required</sup> <a name="certificate" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.certificate"></a>
+##### `certificate`<sup>Required</sup> <a name="certificate" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -157,7 +157,7 @@ public readonly certificate: ICertificate;
 
 ---
 
-##### `distributionDomainName`<sup>Required</sup> <a name="distributionDomainName" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.distributionDomainName"></a>
+##### `distributionDomainName`<sup>Required</sup> <a name="distributionDomainName" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.distributionDomainName"></a>
 
 ```typescript
 public readonly distributionDomainName: string;
@@ -167,7 +167,7 @@ public readonly distributionDomainName: string;
 
 ---
 
-##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity"></a>
+##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity"></a>
 
 ```typescript
 public readonly originAccessIdentity: IOriginAccessIdentity;
@@ -177,7 +177,7 @@ public readonly originAccessIdentity: IOriginAccessIdentity;
 
 ---
 
-##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.originBucket"></a>
+##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket"></a>
 
 ```typescript
 public readonly originBucket: IBucket;
@@ -187,7 +187,7 @@ public readonly originBucket: IBucket;
 
 ---
 
-##### `distributionComment`<sup>Optional</sup> <a name="distributionComment" id="@yicr/secure-frontend-web-app-cloudfront-distribution.FrontendWebAppCloudFrontDistributionProps.property.distributionComment"></a>
+##### `distributionComment`<sup>Optional</sup> <a name="distributionComment" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.distributionComment"></a>
 
 ```typescript
 public readonly distributionComment: string;
