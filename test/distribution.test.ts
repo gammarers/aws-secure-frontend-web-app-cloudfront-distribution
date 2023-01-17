@@ -9,11 +9,12 @@ it('Has Cloudfront Distribution', () => {
   const app = new App();
   const stack = new Stack(app, 'TestingStack');
   new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
+    comment: 'frontend web app distribution.',
     accessLogBucket: new s3.Bucket(stack, 'LogBucket'),
     certificate: new acm.Certificate(stack, 'Certificate', {
       domainName: 'example.com',
     }),
-    distributionDomainName: 'example.com',
+    domainName: 'example.com',
     originAccessIdentity: new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity'),
     originBucket: new s3.Bucket(stack, 'OriginBucket'),
   });

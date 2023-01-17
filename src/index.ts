@@ -6,34 +6,29 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 
 export interface SecureFrontendWebAppCloudFrontDistributionProps {
-  readonly distributionComment?: string;
-  readonly distributionDomainName: string;
+  readonly comment?: string;
+  readonly domainName: string;
   readonly certificate: acm.ICertificate;
   readonly originBucket: s3.IBucket;
   readonly originAccessIdentity: cloudfront.IOriginAccessIdentity;
   readonly accessLogBucket: s3.IBucket;
 }
 
-export class SecureFrontendWebAppCloudFrontDistribution extends Construct {
-
-  public distribution: cloudfront.Distribution;
+export class SecureFrontendWebAppCloudFrontDistribution extends cloudfront.Distribution {
 
   constructor(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionProps) {
-    super(scope, id);
-
-    // 👇Create CloudFront distribution
-    this.distribution = new cloudfront.Distribution(this, 'Distribution', {
+    super(scope, id, {
       enabled: true,
-      comment: 'frontend web app distribution',
+      comment: props.comment,
       defaultRootObject: 'index.html',
       certificate: props.certificate,
-      domainNames: [props.distributionDomainName],
+      domainNames: [props.domainName],
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2021,
       sslSupportMethod: cloudfront.SSLMethod.SNI,
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
       // webAclId: props.wafAclId,
       logBucket: props.accessLogBucket,
-      logFilePrefix: `${props.distributionDomainName}/`,
+      logFilePrefix: `${props.domainName}/`,
       defaultBehavior: {
         allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
         cachedMethods: cloudfront.CachedMethods.CACHE_GET_HEAD_OPTIONS,
@@ -43,7 +38,7 @@ export class SecureFrontendWebAppCloudFrontDistribution extends Construct {
         origin: new origins.S3Origin(props.originBucket, {
           originAccessIdentity: props.originAccessIdentity,
         }),
-        responseHeadersPolicy: new cloudfront.ResponseHeadersPolicy(this, 'ResponseHeadersPolicy', {
+        responseHeadersPolicy: new cloudfront.ResponseHeadersPolicy(scope, 'ResponseHeadersPolicy', {
           //responseHeadersPolicyName: ,
           comment: 'A default policy',
           securityHeadersBehavior: {
