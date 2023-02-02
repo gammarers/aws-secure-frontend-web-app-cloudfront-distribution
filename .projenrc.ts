@@ -13,11 +13,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: PROJECT_DESCRIPTION,
   repositoryUrl: 'https://github.com/yicr/secure-frontend-web-app-cloudfront-distribution.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 'spa', 'vue', 'angular', 'react'],
-  releaseEveryCommit: true,
   npmAccess: javascript.NpmAccess.PUBLIC,
   // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
 });
 project.synth();
