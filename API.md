@@ -2,39 +2,39 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### SecureFrontendWebAppCloudFrontDistribution <a name="SecureFrontendWebAppCloudFrontDistribution" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution"></a>
+### SecureFrontendWebAppCloudFrontDistribution <a name="SecureFrontendWebAppCloudFrontDistribution" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution"></a>
 
-#### Initializers <a name="Initializers" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer"></a>
+#### Initializers <a name="Initializers" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/aws-secure-frontend-web-app-cloudfront-distribution'
 
 new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a></code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a>
+- *Type:* <a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a>
 
 ---
 
@@ -42,13 +42,13 @@ new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, pro
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior">addBehavior</a></code> | Adds a new behavior to this distribution for the given pathPattern. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior">addBehavior</a></code> | Adds a new behavior to this distribution for the given pathPattern. |
 
 ---
 
-##### `toString` <a name="toString" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString"></a>
+##### `toString` <a name="toString" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString"></a>
 
 ```typescript
 public toString(): string
@@ -56,7 +56,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy"></a>
+##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy"></a>
 
 ```typescript
 public applyRemovalPolicy(policy: RemovalPolicy): void
@@ -72,13 +72,13 @@ to be replaced.
 The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
 account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
-###### `policy`<sup>Required</sup> <a name="policy" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy.parameter.policy"></a>
+###### `policy`<sup>Required</sup> <a name="policy" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy.parameter.policy"></a>
 
 - *Type:* aws-cdk-lib.RemovalPolicy
 
 ---
 
-##### `addBehavior` <a name="addBehavior" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior"></a>
+##### `addBehavior` <a name="addBehavior" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior"></a>
 
 ```typescript
 public addBehavior(pathPattern: string, origin: IOrigin, behaviorOptions?: AddBehaviorOptions): void
@@ -86,7 +86,7 @@ public addBehavior(pathPattern: string, origin: IOrigin, behaviorOptions?: AddBe
 
 Adds a new behavior to this distribution for the given pathPattern.
 
-###### `pathPattern`<sup>Required</sup> <a name="pathPattern" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior.parameter.pathPattern"></a>
+###### `pathPattern`<sup>Required</sup> <a name="pathPattern" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior.parameter.pathPattern"></a>
 
 - *Type:* string
 
@@ -94,7 +94,7 @@ the path pattern (e.g., 'images/*') that specifies which requests to apply the b
 
 ---
 
-###### `origin`<sup>Required</sup> <a name="origin" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior.parameter.origin"></a>
+###### `origin`<sup>Required</sup> <a name="origin" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior.parameter.origin"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudfront.IOrigin
 
@@ -102,7 +102,7 @@ the origin to use for this behavior.
 
 ---
 
-###### `behaviorOptions`<sup>Optional</sup> <a name="behaviorOptions" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior.parameter.behaviorOptions"></a>
+###### `behaviorOptions`<sup>Optional</sup> <a name="behaviorOptions" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior.parameter.behaviorOptions"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudfront.AddBehaviorOptions
 
@@ -114,24 +114,24 @@ the options for the behavior at this path.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes">fromDistributionAttributes</a></code> | Creates a Distribution construct that represents an external (imported) distribution. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes">fromDistributionAttributes</a></code> | Creates a Distribution construct that represents an external (imported) distribution. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/aws-secure-frontend-web-app-cloudfront-distribution'
 
 SecureFrontendWebAppCloudFrontDistribution.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -139,61 +139,61 @@ Any object.
 
 ---
 
-##### `isOwnedResource` <a name="isOwnedResource" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isOwnedResource"></a>
+##### `isOwnedResource` <a name="isOwnedResource" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isOwnedResource"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/aws-secure-frontend-web-app-cloudfront-distribution'
 
 SecureFrontendWebAppCloudFrontDistribution.isOwnedResource(construct: IConstruct)
 ```
 
 Returns true if the construct was created by CDK, and false otherwise.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isOwnedResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isOwnedResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `isResource` <a name="isResource" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isResource"></a>
+##### `isResource` <a name="isResource" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isResource"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/aws-secure-frontend-web-app-cloudfront-distribution'
 
 SecureFrontendWebAppCloudFrontDistribution.isResource(construct: IConstruct)
 ```
 
 Check whether the given construct is a Resource.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.isResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `fromDistributionAttributes` <a name="fromDistributionAttributes" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes"></a>
+##### `fromDistributionAttributes` <a name="fromDistributionAttributes" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistribution } from '@yicr/aws-secure-frontend-web-app-cloudfront-distribution'
 
 SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes(scope: Construct, id: string, attrs: DistributionAttributes)
 ```
 
 Creates a Distribution construct that represents an external (imported) distribution.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `attrs`<sup>Required</sup> <a name="attrs" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes.parameter.attrs"></a>
+###### `attrs`<sup>Required</sup> <a name="attrs" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.fromDistributionAttributes.parameter.attrs"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudfront.DistributionAttributes
 
@@ -203,16 +203,16 @@ Creates a Distribution construct that represents an external (imported) distribu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionDomainName">distributionDomainName</a></code> | <code>string</code> | The domain name of the Distribution, such as d111111abcdef8.cloudfront.net. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionId">distributionId</a></code> | <code>string</code> | The distribution ID for this distribution. |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.domainName">domainName</a></code> | <code>string</code> | The domain name of the Distribution, such as d111111abcdef8.cloudfront.net. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionDomainName">distributionDomainName</a></code> | <code>string</code> | The domain name of the Distribution, such as d111111abcdef8.cloudfront.net. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionId">distributionId</a></code> | <code>string</code> | The distribution ID for this distribution. |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.domainName">domainName</a></code> | <code>string</code> | The domain name of the Distribution, such as d111111abcdef8.cloudfront.net. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -224,7 +224,7 @@ The tree node.
 
 ---
 
-##### `env`<sup>Required</sup> <a name="env" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.env"></a>
+##### `env`<sup>Required</sup> <a name="env" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.env"></a>
 
 ```typescript
 public readonly env: ResourceEnvironment;
@@ -243,7 +243,7 @@ that might be different than the stack they were imported into.
 
 ---
 
-##### `stack`<sup>Required</sup> <a name="stack" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.stack"></a>
+##### `stack`<sup>Required</sup> <a name="stack" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.stack"></a>
 
 ```typescript
 public readonly stack: Stack;
@@ -255,7 +255,7 @@ The stack in which this resource is defined.
 
 ---
 
-##### `distributionDomainName`<sup>Required</sup> <a name="distributionDomainName" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionDomainName"></a>
+##### `distributionDomainName`<sup>Required</sup> <a name="distributionDomainName" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionDomainName"></a>
 
 ```typescript
 public readonly distributionDomainName: string;
@@ -267,7 +267,7 @@ The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
 
 ---
 
-##### `distributionId`<sup>Required</sup> <a name="distributionId" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionId"></a>
+##### `distributionId`<sup>Required</sup> <a name="distributionId" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionId"></a>
 
 ```typescript
 public readonly distributionId: string;
@@ -279,7 +279,7 @@ The distribution ID for this distribution.
 
 ---
 
-##### `domainName`<sup>Required</sup> <a name="domainName" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.domainName"></a>
+##### `domainName`<sup>Required</sup> <a name="domainName" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.domainName"></a>
 
 ```typescript
 public readonly domainName: string;
@@ -294,12 +294,12 @@ The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### SecureFrontendWebAppCloudFrontDistributionProps <a name="SecureFrontendWebAppCloudFrontDistributionProps" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps"></a>
+### SecureFrontendWebAppCloudFrontDistributionProps <a name="SecureFrontendWebAppCloudFrontDistributionProps" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps"></a>
 
-#### Initializer <a name="Initializer" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.Initializer"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistributionProps } from '@yicr/secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistributionProps } from '@yicr/aws-secure-frontend-web-app-cloudfront-distribution'
 
 const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloudFrontDistributionProps = { ... }
 ```
@@ -308,16 +308,16 @@ const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloud
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `accessLogBucket`<sup>Required</sup> <a name="accessLogBucket" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
+##### `accessLogBucket`<sup>Required</sup> <a name="accessLogBucket" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
 
 ```typescript
 public readonly accessLogBucket: IBucket;
@@ -327,7 +327,7 @@ public readonly accessLogBucket: IBucket;
 
 ---
 
-##### `certificate`<sup>Required</sup> <a name="certificate" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate"></a>
+##### `certificate`<sup>Required</sup> <a name="certificate" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -337,7 +337,7 @@ public readonly certificate: ICertificate;
 
 ---
 
-##### `domainName`<sup>Required</sup> <a name="domainName" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName"></a>
+##### `domainName`<sup>Required</sup> <a name="domainName" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName"></a>
 
 ```typescript
 public readonly domainName: string;
@@ -347,7 +347,7 @@ public readonly domainName: string;
 
 ---
 
-##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity"></a>
+##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity"></a>
 
 ```typescript
 public readonly originAccessIdentity: IOriginAccessIdentity;
@@ -357,7 +357,7 @@ public readonly originAccessIdentity: IOriginAccessIdentity;
 
 ---
 
-##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket"></a>
+##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket"></a>
 
 ```typescript
 public readonly originBucket: IBucket;
@@ -367,7 +367,7 @@ public readonly originBucket: IBucket;
 
 ---
 
-##### `comment`<sup>Optional</sup> <a name="comment" id="@yicr/secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment"></a>
+##### `comment`<sup>Optional</sup> <a name="comment" id="@yicr/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment"></a>
 
 ```typescript
 public readonly comment: string;
