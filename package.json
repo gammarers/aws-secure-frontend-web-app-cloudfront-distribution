@@ -1,5 +1,5 @@
 {
-  "name": "@yicr/aws-secure-frontend-web-app-cloudfront-distribution",
+  "name": "@gammarer/aws-secure-frontend-web-app-cloudfront-distribution",
   "description": "AWS CloudFront distribution for frontend web app (spa) optimized.",
   "repository": {
     "type": "git",
