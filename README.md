@@ -8,10 +8,14 @@ AWS CloudFront distribution for frontend web app (spa) optimized.
 
 ```shell
 npm install @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
-```
-or
-```shell
+# or
 yarn add @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
+```
+
+### Python
+
+```shell
+pip install gammarer.aws-secure-frontend-web-app-cloudfront-distribution
 ```
 
 ## Example
