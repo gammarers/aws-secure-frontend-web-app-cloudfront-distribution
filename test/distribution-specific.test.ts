@@ -5,10 +5,13 @@ import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { SecureFrontendWebAppCloudFrontDistribution } from '../src';
 
-describe('SecureFrontendWebAppCloudFrontDistribution default testing', () => {
+describe('SecureFrontendWebAppCloudFrontDistribution specific testing', () => {
   const app = new App();
   const stack = new Stack(app, 'TestingStack');
+
   new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
+    comment: 'frontend web app distribution.',
+    accessLogBucket: new s3.Bucket(stack, 'LogBucket'),
     certificate: new acm.Certificate(stack, 'Certificate', {
       domainName: 'example.com',
     }),
@@ -24,6 +27,7 @@ describe('SecureFrontendWebAppCloudFrontDistribution default testing', () => {
     template.hasResourceProperties('AWS::CloudFront::Distribution', Match.objectEquals({
       DistributionConfig: {
         Enabled: true,
+        Comment: 'frontend web app distribution.',
         DefaultRootObject: 'index.html',
         HttpVersion: 'http2and3',
         IPV6Enabled: true,
@@ -95,53 +99,14 @@ describe('SecureFrontendWebAppCloudFrontDistribution default testing', () => {
           MinimumProtocolVersion: 'TLSv1.2_2021',
           SslSupportMethod: 'sni-only',
         },
-      },
-    }));
-  });
-
-  it('Should match Cloudfront ResponseHeadersPolicy', async () => {
-
-    template.hasResourceProperties('AWS::CloudFront::ResponseHeadersPolicy', Match.objectEquals({
-      ResponseHeadersPolicyConfig: {
-        Name: Match.stringLikeRegexp('TestingStackResponseHeadersPolicy.*'),
-        Comment: 'A default policy',
-        CustomHeadersConfig: {
-          Items: Match.arrayWith([
-            {
-              Override: true,
-              Header: 'Cache-Control',
-              Value: 'no-cache, no-store, private',
-            },
-            {
-              Override: true,
-              Header: 'pragma',
-              Value: 'no-cache',
-            },
-          ]),
-        },
-        SecurityHeadersConfig: {
-          ContentTypeOptions: {
-            Override: true,
+        Logging: {
+          Bucket: {
+            'Fn::GetAtt': [
+              Match.stringLikeRegexp('LogBucket.*'),
+              'RegionalDomainName',
+            ],
           },
-          FrameOptions: {
-            Override: true,
-            FrameOption: 'SAMEORIGIN',
-          },
-          ReferrerPolicy: {
-            Override: true,
-            ReferrerPolicy: 'strict-origin-when-cross-origin',
-          },
-          StrictTransportSecurity: {
-            Override: true,
-            AccessControlMaxAgeSec: 31536000,
-            IncludeSubdomains: true,
-            Preload: true,
-          },
-          XSSProtection: {
-            Override: true,
-            ModeBlock: true,
-            Protection: true,
-          },
+          Prefix: 'example.com/',
         },
       },
     }));
