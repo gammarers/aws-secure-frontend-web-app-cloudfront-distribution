@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SecureFrontendWebAppCloudFrontDistribution Testing Should match snapshot. 1`] = `
+exports[`SecureFrontendWebAppCloudFrontDistribution default testing Should match snapshot. 1`] = `
 Object {
   "Parameters": Object {
     "BootstrapVersion": Object {
@@ -22,11 +22,6 @@ Object {
         "ValidationMethod": "EMAIL",
       },
       "Type": "AWS::CertificateManager::Certificate",
-    },
-    "LogBucketCC3B17E8": Object {
-      "DeletionPolicy": "Retain",
-      "Type": "AWS::S3::Bucket",
-      "UpdateReplacePolicy": "Retain",
     },
     "OriginAccessIdentityDF1E3CAC": Object {
       "Properties": Object {
@@ -133,7 +128,6 @@ Object {
           "Aliases": Array [
             "example.com",
           ],
-          "Comment": "frontend web app distribution.",
           "CustomErrorResponses": Array [
             Object {
               "ErrorCachingMinTTL": 300,
@@ -171,15 +165,6 @@ Object {
           "Enabled": true,
           "HttpVersion": "http2and3",
           "IPV6Enabled": true,
-          "Logging": Object {
-            "Bucket": Object {
-              "Fn::GetAtt": Array [
-                "LogBucketCC3B17E8",
-                "RegionalDomainName",
-              ],
-            },
-            "Prefix": "example.com/",
-          },
           "Origins": Array [
             Object {
               "DomainName": Object {
