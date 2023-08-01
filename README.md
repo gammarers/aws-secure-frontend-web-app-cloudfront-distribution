@@ -20,15 +20,12 @@ pip install gammarer.aws-secure-frontend-web-app-cloudfront-distribution
 
 ## Example
 
-```shell
-npm install @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
-```
-
 ```typescript
 import { SecureFrontendWebAppCloudFrontDistribution } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution';
 
 new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
-  accessLogBucket: new s3.Bucket(stack, 'LogBucket'),
+  comment: 'frontend web app distribution.', // optional
+  accessLogBucket: new s3.Bucket(stack, 'LogBucket'), // optional
   certificate: new acm.Certificate(stack, 'Certificate', {
     domainName: 'example.com',
   }),
