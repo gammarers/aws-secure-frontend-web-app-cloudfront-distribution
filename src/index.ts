@@ -11,7 +11,7 @@ export interface SecureFrontendWebAppCloudFrontDistributionProps {
   readonly certificate: acm.ICertificate;
   readonly originBucket: s3.IBucket;
   readonly originAccessIdentity: cloudfront.IOriginAccessIdentity;
-  readonly accessLogBucket: s3.IBucket;
+  readonly accessLogBucket?: s3.IBucket;
 }
 
 export class SecureFrontendWebAppCloudFrontDistribution extends cloudfront.Distribution {
@@ -28,7 +28,7 @@ export class SecureFrontendWebAppCloudFrontDistribution extends cloudfront.Distr
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
       // webAclId: props.wafAclId,
       logBucket: props.accessLogBucket,
-      logFilePrefix: `${props.domainName}/`,
+      logFilePrefix: props.accessLogBucket ? `${props.domainName}/` : undefined,
       defaultBehavior: {
         allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
         cachedMethods: cloudfront.CachedMethods.CACHE_GET_HEAD_OPTIONS,
