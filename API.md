@@ -20,15 +20,12 @@ pip install gammarer.aws-secure-frontend-web-app-cloudfront-distribution
 
 ## Example
 
-```shell
-npm install @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
-```
-
 ```typescript
 import { SecureFrontendWebAppCloudFrontDistribution } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution';
 
 new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
-  accessLogBucket: new s3.Bucket(stack, 'LogBucket'),
+  comment: 'frontend web app distribution.', // optional
+  accessLogBucket: new s3.Bucket(stack, 'LogBucket'), // optional
   certificate: new acm.Certificate(stack, 'Certificate', {
     domainName: 'example.com',
   }),
@@ -349,22 +346,12 @@ const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloud
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
-
----
-
-##### `accessLogBucket`<sup>Required</sup> <a name="accessLogBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
-
-```typescript
-public readonly accessLogBucket: IBucket;
-```
-
-- *Type:* aws-cdk-lib.aws_s3.IBucket
 
 ---
 
@@ -402,6 +389,16 @@ public readonly originAccessIdentity: IOriginAccessIdentity;
 
 ```typescript
 public readonly originBucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+
+---
+
+##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
+
+```typescript
+public readonly accessLogBucket: IBucket;
 ```
 
 - *Type:* aws-cdk-lib.aws_s3.IBucket
