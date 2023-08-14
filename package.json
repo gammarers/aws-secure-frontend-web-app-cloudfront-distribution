@@ -17,6 +17,7 @@
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:java": "npx projen package:java",
     "package:js": "npx projen package:js",
     "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
@@ -133,6 +134,13 @@
   "jsii": {
     "outdir": "dist",
     "targets": {
+      "java": {
+        "package": "com.gammarer.cdk.aws.secure_frontend_web_app_cloudfront_distribution",
+        "maven": {
+          "groupId": "com.gammarer",
+          "artifactId": "aws-secure-frontend-web-app-cloudfront-distribution"
+        }
+      },
       "python": {
         "distName": "gammarer.aws-secure-frontend-web-app-cloudfront-distribution",
         "module": "gammarer.aws_secure_frontend_web_app_cloudfront_distribution"
