@@ -28,5 +28,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'gammarer.aws-secure-frontend-web-app-cloudfront-distribution',
     module: 'gammarer.aws_secure_frontend_web_app_cloudfront_distribution',
   },
+  publishToMaven: {
+    mavenGroupId: 'com.gammarer',
+    javaPackage: 'com.gammarer.cdk.aws.secure_frontend_web_app_cloudfront_distribution',
+    mavenArtifactId: 'aws-secure-frontend-web-app-cloudfront-distribution',
+    mavenEndpoint: 'https://s01.oss.sonatype.org',
+  },
 });
 project.synth();
