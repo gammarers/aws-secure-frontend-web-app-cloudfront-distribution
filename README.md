@@ -18,6 +18,16 @@ yarn add @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
 pip install gammarer.aws-secure-frontend-web-app-cloudfront-distribution
 ```
 
+### Java
+Add the following to pom.xml:
+
+```xml
+<dependency>
+  <groupId>com.gammarer</groupId>
+  <artifactId>aws-secure-frontend-web-app-cloudfront-distribution</artifactId>
+</dependency>
+```
+
 ## Example
 
 ```typescript
