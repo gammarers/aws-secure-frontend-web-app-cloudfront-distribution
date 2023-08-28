@@ -3,8 +3,9 @@ import { awscdk, javascript } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',
   authorAddress: 'yicr@users.noreply.github.com',
-  cdkVersion: '2.43.0',
-  typescriptVersion: '5.1.x',
+  cdkVersion: '2.80.0',
+  typescriptVersion: '4.9.x',
+  jsiiVersion: '~5.0.0',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution',
@@ -12,12 +13,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/yicr/aws-secure-frontend-web-app-cloudfront-distribution.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 'spa', 'vue', 'angular', 'react'],
   npmAccess: javascript.NpmAccess.PUBLIC,
-  minNodeVersion: '16.0.0',
-  workflowNodeVersion: '16.19.1',
+  minNodeVersion: '18.0.0',
+  workflowNodeVersion: '18.17.1',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      schedule: javascript.UpgradeDependenciesSchedule.expressions(['0 18 * * *']),
+      schedule: javascript.UpgradeDependenciesSchedule.expressions(['0 18 * * 0']), // every sunday 18:00 (JST/MON:0300)
     },
   },
   autoApproveOptions: {

@@ -4,7 +4,7 @@ name: upgrade-main
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: 0 18 * * *
+    - cron: 0 18 * * 0
 jobs:
   upgrade:
     name: Upgrade
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.19.1
+          node-version: 18.17.1
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
       - name: Upgrade dependencies
