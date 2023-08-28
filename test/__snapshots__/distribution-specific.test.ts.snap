@@ -19,6 +19,12 @@ Object {
             "ValidationDomain": "example.com",
           },
         ],
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "TestingStack/Certificate",
+          },
+        ],
         "ValidationMethod": "EMAIL",
       },
       "Type": "AWS::CertificateManager::Certificate",
