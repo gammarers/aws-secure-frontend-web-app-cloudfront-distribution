@@ -101,6 +101,8 @@ new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, pro
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior">addBehavior</a></code> | Adds a new behavior to this distribution for the given pathPattern. |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant">grant</a></code> | Adds an IAM policy statement associated with this distribution to an IAM principal's policy. |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grantCreateInvalidation">grantCreateInvalidation</a></code> | Grant to create invalidations for this bucket to an IAM principal (Role/Group/User). |
 
 ---
 
@@ -163,6 +165,46 @@ the origin to use for this behavior.
 - *Type:* aws-cdk-lib.aws_cloudfront.AddBehaviorOptions
 
 the options for the behavior at this path.
+
+---
+
+##### `grant` <a name="grant" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant"></a>
+
+```typescript
+public grant(identity: IGrantable, actions: string): Grant
+```
+
+Adds an IAM policy statement associated with this distribution to an IAM principal's policy.
+
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant.parameter.identity"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.IGrantable
+
+The principal.
+
+---
+
+###### `actions`<sup>Required</sup> <a name="actions" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant.parameter.actions"></a>
+
+- *Type:* string
+
+The set of actions to allow (i.e. "cloudfront:ListInvalidations").
+
+---
+
+##### `grantCreateInvalidation` <a name="grantCreateInvalidation" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grantCreateInvalidation"></a>
+
+```typescript
+public grantCreateInvalidation(identity: IGrantable): Grant
+```
+
+Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).
+
+###### `identity`<sup>Required</sup> <a name="identity" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grantCreateInvalidation.parameter.identity"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.IGrantable
+
+The principal.
 
 ---
 
