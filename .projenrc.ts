@@ -35,5 +35,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     mavenArtifactId: 'aws-secure-frontend-web-app-cloudfront-distribution',
     mavenEndpoint: 'https://s01.oss.sonatype.org',
   },
+  publishToNuget: {
+    dotNetNamespace: 'Gammarer.CDK.AWS',
+    packageId: 'Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution',
+  },
 });
 project.synth();

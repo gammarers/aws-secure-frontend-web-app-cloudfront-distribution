@@ -17,6 +17,7 @@
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:dotnet": "npx projen package:dotnet",
     "package:java": "npx projen package:java",
     "package:js": "npx projen package:js",
     "package:python": "npx projen package:python",
@@ -140,6 +141,10 @@
       "python": {
         "distName": "gammarer.aws-secure-frontend-web-app-cloudfront-distribution",
         "module": "gammarer.aws_secure_frontend_web_app_cloudfront_distribution"
+      },
+      "dotnet": {
+        "namespace": "Gammarer.CDK.AWS",
+        "packageId": "Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution"
       }
     },
     "tsc": {
