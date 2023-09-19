@@ -26,6 +26,12 @@ yarn add @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
 pip install gammarer.aws-secure-frontend-web-app-cloudfront-distribution
 ```
 
+### C# / .NET
+
+```shell
+dotnet add package Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution
+```
+
 ### Java
 Add the following to pom.xml:
 
