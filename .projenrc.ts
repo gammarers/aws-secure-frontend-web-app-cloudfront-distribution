@@ -10,7 +10,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   name: '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution',
   description: 'AWS CloudFront distribution for frontend web app (spa) optimized.',
-  repositoryUrl: 'https://github.com/yicr/aws-secure-frontend-web-app-cloudfront-distribution.git',
+  repositoryUrl: 'https://github.com/gammarer/aws-secure-frontend-web-app-cloudfront-distribution.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 'spa', 'vue', 'angular', 'react'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',
