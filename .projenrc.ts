@@ -5,7 +5,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'yicr@users.noreply.github.com',
   cdkVersion: '2.80.0',
   typescriptVersion: '5.1.x',
-  jsiiVersion: '~5.0.0',
+  jsiiVersion: '5.1.x',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
   name: '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution',
