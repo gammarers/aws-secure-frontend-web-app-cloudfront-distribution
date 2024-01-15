@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SecureFrontendWebAppCloudFrontDistribution specific testing Should match snapshot. 1`] = `
-Object {
-  "Parameters": Object {
-    "BootstrapVersion": Object {
+{
+  "Parameters": {
+    "BootstrapVersion": {
       "Default": "/cdk-bootstrap/hnb659fds/version",
       "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
       "Type": "AWS::SSM::Parameter::Value<String>",
     },
   },
-  "Resources": Object {
-    "Certificate4E7ABB08": Object {
-      "Properties": Object {
+  "Resources": {
+    "Certificate4E7ABB08": {
+      "Properties": {
         "DomainName": "example.com",
-        "DomainValidationOptions": Array [
-          Object {
+        "DomainValidationOptions": [
+          {
             "DomainName": "example.com",
             "ValidationDomain": "example.com",
           },
         ],
-        "Tags": Array [
-          Object {
+        "Tags": [
+          {
             "Key": "Name",
             "Value": "TestingStack/Certificate",
           },
@@ -29,48 +29,48 @@ Object {
       },
       "Type": "AWS::CertificateManager::Certificate",
     },
-    "LogBucketCC3B17E8": Object {
+    "LogBucketCC3B17E8": {
       "DeletionPolicy": "Retain",
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
     },
-    "OriginAccessIdentityDF1E3CAC": Object {
-      "Properties": Object {
-        "CloudFrontOriginAccessIdentityConfig": Object {
+    "OriginAccessIdentityDF1E3CAC": {
+      "Properties": {
+        "CloudFrontOriginAccessIdentityConfig": {
           "Comment": "Allows CloudFront to reach the bucket",
         },
       },
       "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
     },
-    "OriginBucketCA772B8F": Object {
+    "OriginBucketCA772B8F": {
       "DeletionPolicy": "Retain",
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
     },
-    "OriginBucketPolicyFD67BA59": Object {
-      "Properties": Object {
-        "Bucket": Object {
+    "OriginBucketPolicyFD67BA59": {
+      "Properties": {
+        "Bucket": {
           "Ref": "OriginBucketCA772B8F",
         },
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "s3:GetObject",
               "Effect": "Allow",
-              "Principal": Object {
-                "CanonicalUser": Object {
-                  "Fn::GetAtt": Array [
+              "Principal": {
+                "CanonicalUser": {
+                  "Fn::GetAtt": [
                     "OriginAccessIdentityDF1E3CAC",
                     "S3CanonicalUserId",
                   ],
                 },
               },
-              "Resource": Object {
-                "Fn::Join": Array [
+              "Resource": {
+                "Fn::Join": [
                   "",
-                  Array [
-                    Object {
-                      "Fn::GetAtt": Array [
+                  [
+                    {
+                      "Fn::GetAtt": [
                         "OriginBucketCA772B8F",
                         "Arn",
                       ],
@@ -86,18 +86,18 @@ Object {
       },
       "Type": "AWS::S3::BucketPolicy",
     },
-    "ResponseHeadersPolicy13DBF9E0": Object {
-      "Properties": Object {
-        "ResponseHeadersPolicyConfig": Object {
+    "ResponseHeadersPolicy13DBF9E0": {
+      "Properties": {
+        "ResponseHeadersPolicyConfig": {
           "Comment": "A default policy",
-          "CustomHeadersConfig": Object {
-            "Items": Array [
-              Object {
+          "CustomHeadersConfig": {
+            "Items": [
+              {
                 "Header": "Cache-Control",
                 "Override": true,
                 "Value": "no-cache, no-store, private",
               },
-              Object {
+              {
                 "Header": "pragma",
                 "Override": true,
                 "Value": "no-cache",
@@ -105,25 +105,25 @@ Object {
             ],
           },
           "Name": "TestingStackResponseHeadersPolicyA6DAC75B",
-          "SecurityHeadersConfig": Object {
-            "ContentTypeOptions": Object {
+          "SecurityHeadersConfig": {
+            "ContentTypeOptions": {
               "Override": true,
             },
-            "FrameOptions": Object {
+            "FrameOptions": {
               "FrameOption": "SAMEORIGIN",
               "Override": true,
             },
-            "ReferrerPolicy": Object {
+            "ReferrerPolicy": {
               "Override": true,
               "ReferrerPolicy": "strict-origin-when-cross-origin",
             },
-            "StrictTransportSecurity": Object {
+            "StrictTransportSecurity": {
               "AccessControlMaxAgeSec": 31536000,
               "IncludeSubdomains": true,
               "Override": true,
               "Preload": true,
             },
-            "XSSProtection": Object {
+            "XSSProtection": {
               "ModeBlock": true,
               "Override": true,
               "Protection": true,
@@ -133,41 +133,41 @@ Object {
       },
       "Type": "AWS::CloudFront::ResponseHeadersPolicy",
     },
-    "SecureFrontendWebAppCloudFrontDistributionFBE118EA": Object {
-      "Properties": Object {
-        "DistributionConfig": Object {
-          "Aliases": Array [
+    "SecureFrontendWebAppCloudFrontDistributionFBE118EA": {
+      "Properties": {
+        "DistributionConfig": {
+          "Aliases": [
             "example.com",
           ],
           "Comment": "frontend web app distribution.",
-          "CustomErrorResponses": Array [
-            Object {
+          "CustomErrorResponses": [
+            {
               "ErrorCachingMinTTL": 300,
               "ErrorCode": 403,
               "ResponseCode": 200,
               "ResponsePagePath": "/index.html",
             },
-            Object {
+            {
               "ErrorCachingMinTTL": 300,
               "ErrorCode": 404,
               "ResponseCode": 200,
               "ResponsePagePath": "/index.html",
             },
           ],
-          "DefaultCacheBehavior": Object {
-            "AllowedMethods": Array [
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
               "GET",
               "HEAD",
               "OPTIONS",
             ],
             "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
-            "CachedMethods": Array [
+            "CachedMethods": [
               "GET",
               "HEAD",
               "OPTIONS",
             ],
             "Compress": true,
-            "ResponseHeadersPolicyId": Object {
+            "ResponseHeadersPolicyId": {
               "Ref": "ResponseHeadersPolicy13DBF9E0",
             },
             "TargetOriginId": "TestingStackSecureFrontendWebAppCloudFrontDistributionOrigin11EBA8679",
@@ -177,31 +177,31 @@ Object {
           "Enabled": true,
           "HttpVersion": "http2and3",
           "IPV6Enabled": true,
-          "Logging": Object {
-            "Bucket": Object {
-              "Fn::GetAtt": Array [
+          "Logging": {
+            "Bucket": {
+              "Fn::GetAtt": [
                 "LogBucketCC3B17E8",
                 "RegionalDomainName",
               ],
             },
             "Prefix": "example.com/",
           },
-          "Origins": Array [
-            Object {
-              "DomainName": Object {
-                "Fn::GetAtt": Array [
+          "Origins": [
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
                   "OriginBucketCA772B8F",
                   "RegionalDomainName",
                 ],
               },
               "Id": "TestingStackSecureFrontendWebAppCloudFrontDistributionOrigin11EBA8679",
-              "S3OriginConfig": Object {
-                "OriginAccessIdentity": Object {
-                  "Fn::Join": Array [
+              "S3OriginConfig": {
+                "OriginAccessIdentity": {
+                  "Fn::Join": [
                     "",
-                    Array [
+                    [
                       "origin-access-identity/cloudfront/",
-                      Object {
+                      {
                         "Ref": "OriginAccessIdentityDF1E3CAC",
                       },
                     ],
@@ -211,8 +211,8 @@ Object {
             },
           ],
           "PriceClass": "PriceClass_All",
-          "ViewerCertificate": Object {
-            "AcmCertificateArn": Object {
+          "ViewerCertificate": {
+            "AcmCertificateArn": {
               "Ref": "Certificate4E7ABB08",
             },
             "MinimumProtocolVersion": "TLSv1.2_2021",
@@ -223,22 +223,22 @@ Object {
       "Type": "AWS::CloudFront::Distribution",
     },
   },
-  "Rules": Object {
-    "CheckBootstrapVersion": Object {
-      "Assertions": Array [
-        Object {
-          "Assert": Object {
-            "Fn::Not": Array [
-              Object {
-                "Fn::Contains": Array [
-                  Array [
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
                     "1",
                     "2",
                     "3",
                     "4",
                     "5",
                   ],
-                  Object {
+                  {
                     "Ref": "BootstrapVersion",
                   },
                 ],
