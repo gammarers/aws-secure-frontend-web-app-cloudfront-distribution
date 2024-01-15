@@ -58,7 +58,7 @@
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
-    "typescript": "4.9.x"
+    "typescript": "5.1.x"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.80.0",
