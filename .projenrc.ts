@@ -15,7 +15,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 'spa', 'vue', 'angular', 'react'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '16.0.0',
-  workflowNodeVersion: '18.17.1',
+  workflowNodeVersion: '20.11.0',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
