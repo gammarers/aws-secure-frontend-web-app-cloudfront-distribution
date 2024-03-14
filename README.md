@@ -1,3 +1,5 @@
+# AWS Secure Frontend Web App CloudFront Distribution (for AWS CDK v2)
+
 [![GitHub](https://img.shields.io/github/license/yicr/aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://github.com/yicr/aws-secure-frontend-web-app-cloudfront-distribution/blob/main/LICENSE)
 [![npm (scoped)](https://img.shields.io/npm/v/@gammarer/aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://www.npmjs.com/package/@gammarer/aws-secure-frontend-web-app-cloudfront-distribution)
 [![PyPI](https://img.shields.io/pypi/v/gammarer.aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://pypi.org/project/gammarer.aws-secure-frontend-web-app-cloudfront-distribution/)
@@ -6,7 +8,7 @@
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/yicr/aws-secure-frontend-web-app-cloudfront-distribution/release.yml?branch=main&label=release&style=flat-square)](https://github.com/yicr/aws-secure-frontend-web-app-cloudfront-distribution/actions/workflows/release.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/yicr/aws-secure-frontend-web-app-cloudfront-distribution?sort=semver&style=flat-square)](https://github.com/yicr/aws-secure-frontend-web-app-cloudfront-distribution/releases)
 
-# AWS Secure Frontend Web App CloudFront Distribution (for AWS CDK v2)
+[![View on Construct Hub](https://constructs.dev/badge?package=@gammarer/aws-secure-frontend-web-app-cloudfront-distribution)](https://constructs.dev/packages/@gammarer/aws-secure-frontend-web-app-cloudfront-distribution)
 
 AWS CloudFront distribution for frontend web app (spa) optimized.
 
@@ -33,6 +35,7 @@ dotnet add package Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution
 ```
 
 ### Java
+
 Add the following to pom.xml:
 
 ```xml
@@ -59,3 +62,7 @@ new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloud
 });
 
 ```
+
+## License
+
+This project is licensed under the Apache-2.0 License.
