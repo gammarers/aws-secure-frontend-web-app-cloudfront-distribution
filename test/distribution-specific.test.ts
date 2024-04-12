@@ -3,11 +3,21 @@ import { Match, Template } from 'aws-cdk-lib/assertions';
 import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-import { SecureFrontendWebAppCloudFrontDistribution } from '../src';
+import { S3OriginAccessType, SecureFrontendWebAppCloudFrontDistribution } from '../src';
 
 describe('SecureFrontendWebAppCloudFrontDistribution specific testing', () => {
   const app = new App();
   const stack = new Stack(app, 'TestingStack');
+
+  const cfnOriginAccessControl = new cloudfront.CfnOriginAccessControl(stack, 'OriginAccessControl', {
+    originAccessControlConfig: {
+      name: 'OriginAccessControlForContentsBucket',
+      originAccessControlOriginType: 's3',
+      signingBehavior: 'always',
+      signingProtocol: 'sigv4',
+      description: 'Access Control',
+    },
+  });
 
   new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
     comment: 'frontend web app distribution.',
@@ -16,7 +26,8 @@ describe('SecureFrontendWebAppCloudFrontDistribution specific testing', () => {
       domainName: 'example.com',
     }),
     domainName: 'example.com',
-    originAccessIdentity: new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity'),
+    s3OriginAccessType: S3OriginAccessType.ORIGIN_ACCESS_CONTROL,
+    originAccessControlId: cfnOriginAccessControl.attrId,
     originBucket: new s3.Bucket(stack, 'OriginBucket'),
   });
 
@@ -76,18 +87,14 @@ describe('SecureFrontendWebAppCloudFrontDistribution specific testing', () => {
               ],
             },
             Id: Match.stringLikeRegexp('TestingStackSecureFrontendWebAppCloudFrontDistributionOrigin.*'),
+            OriginAccessControlId: {
+              'Fn::GetAtt': [
+                'OriginAccessControl',
+                'Id',
+              ],
+            },
             S3OriginConfig: {
-              OriginAccessIdentity: {
-                'Fn::Join': [
-                  '',
-                  [
-                    'origin-access-identity/cloudfront/',
-                    {
-                      Ref: Match.stringLikeRegexp('OriginAccessIdentity.*'),
-                    },
-                  ],
-                ],
-              },
+              OriginAccessIdentity: '',
             },
           },
         ]),

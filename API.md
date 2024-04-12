@@ -9,14 +9,14 @@
 ```typescript
 import { SecureFrontendWebAppCloudFrontDistribution } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution'
 
-new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionProps)
+new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps | SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
 | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps</a> \| <a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps</a></code> | *No description.* |
 
 ---
 
@@ -34,7 +34,7 @@ new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, pro
 
 ##### `props`<sup>Required</sup> <a name="props" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a>
+- *Type:* <a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps</a> | <a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps</a>
 
 ---
 
@@ -336,30 +336,31 @@ The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### SecureFrontendWebAppCloudFrontDistributionProps <a name="SecureFrontendWebAppCloudFrontDistributionProps" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps"></a>
+### SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps <a name="SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps"></a>
 
-#### Initializer <a name="Initializer" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.Initializer"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistributionProps } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution'
 
-const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloudFrontDistributionProps = { ... }
+const secureFrontendWebAppCloudFrontDistributionOriginAccessControlProps: SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps = { ... }
 ```
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originAccessControlId">originAccessControlId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.s3OriginAccessType">s3OriginAccessType</a></code> | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `certificate`<sup>Required</sup> <a name="certificate" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate"></a>
+##### `certificate`<sup>Required</sup> <a name="certificate" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -369,7 +370,7 @@ public readonly certificate: ICertificate;
 
 ---
 
-##### `domainName`<sup>Required</sup> <a name="domainName" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName"></a>
+##### `domainName`<sup>Required</sup> <a name="domainName" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.domainName"></a>
 
 ```typescript
 public readonly domainName: string;
@@ -379,17 +380,17 @@ public readonly domainName: string;
 
 ---
 
-##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originAccessIdentity"></a>
+##### `originAccessControlId`<sup>Required</sup> <a name="originAccessControlId" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originAccessControlId"></a>
 
 ```typescript
-public readonly originAccessIdentity: IOriginAccessIdentity;
+public readonly originAccessControlId: string;
 ```
 
-- *Type:* aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity
+- *Type:* string
 
 ---
 
-##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket"></a>
+##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originBucket"></a>
 
 ```typescript
 public readonly originBucket: IBucket;
@@ -399,7 +400,17 @@ public readonly originBucket: IBucket;
 
 ---
 
-##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
+##### `s3OriginAccessType`<sup>Required</sup> <a name="s3OriginAccessType" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.s3OriginAccessType"></a>
+
+```typescript
+public readonly s3OriginAccessType: S3OriginAccessType;
+```
+
+- *Type:* <a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a>
+
+---
+
+##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.accessLogBucket"></a>
 
 ```typescript
 public readonly accessLogBucket: IBucket;
@@ -409,7 +420,101 @@ public readonly accessLogBucket: IBucket;
 
 ---
 
-##### `comment`<sup>Optional</sup> <a name="comment" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment"></a>
+##### `comment`<sup>Optional</sup> <a name="comment" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.comment"></a>
+
+```typescript
+public readonly comment: string;
+```
+
+- *Type:* string
+
+---
+
+### SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps <a name="SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps"></a>
+
+#### Initializer <a name="Initializer" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.Initializer"></a>
+
+```typescript
+import { SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution'
+
+const secureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps: SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.s3OriginAccessType">s3OriginAccessType</a></code> | <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `certificate`<sup>Required</sup> <a name="certificate" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.certificate"></a>
+
+```typescript
+public readonly certificate: ICertificate;
+```
+
+- *Type:* aws-cdk-lib.aws_certificatemanager.ICertificate
+
+---
+
+##### `domainName`<sup>Required</sup> <a name="domainName" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.domainName"></a>
+
+```typescript
+public readonly domainName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originAccessIdentity"></a>
+
+```typescript
+public readonly originAccessIdentity: IOriginAccessIdentity;
+```
+
+- *Type:* aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity
+
+---
+
+##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originBucket"></a>
+
+```typescript
+public readonly originBucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+
+---
+
+##### `s3OriginAccessType`<sup>Required</sup> <a name="s3OriginAccessType" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.s3OriginAccessType"></a>
+
+```typescript
+public readonly s3OriginAccessType: S3OriginAccessType;
+```
+
+- *Type:* <a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a>
+
+---
+
+##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.accessLogBucket"></a>
+
+```typescript
+public readonly accessLogBucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+
+---
+
+##### `comment`<sup>Optional</sup> <a name="comment" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.comment"></a>
 
 ```typescript
 public readonly comment: string;
@@ -420,4 +525,26 @@ public readonly comment: string;
 ---
 
 
+
+## Enums <a name="Enums" id="Enums"></a>
+
+### S3OriginAccessType <a name="S3OriginAccessType" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType"></a>
+
+#### Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_IDENTITY">ORIGIN_ACCESS_IDENTITY</a></code> | *No description.* |
+| <code><a href="#@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_CONTROL">ORIGIN_ACCESS_CONTROL</a></code> | *No description.* |
+
+---
+
+##### `ORIGIN_ACCESS_IDENTITY` <a name="ORIGIN_ACCESS_IDENTITY" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_IDENTITY"></a>
+
+---
+
+
+##### `ORIGIN_ACCESS_CONTROL` <a name="ORIGIN_ACCESS_CONTROL" id="@gammarer/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_CONTROL"></a>
+
+---
 
