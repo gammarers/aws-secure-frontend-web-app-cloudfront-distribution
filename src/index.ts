@@ -10,7 +10,7 @@ export enum S3OriginAccessType {
   ORIGIN_ACCESS_CONTROL,
 }
 
-export interface BaseSecureFrontendWebAppCloudFrontDistributionProps {
+interface BaseSecureFrontendWebAppCloudFrontDistributionProps {
   readonly comment?: string;
   readonly domainName: string;
   readonly s3OriginAccessType: S3OriginAccessType;
