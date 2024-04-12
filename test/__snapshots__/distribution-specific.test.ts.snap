@@ -34,13 +34,17 @@ exports[`SecureFrontendWebAppCloudFrontDistribution specific testing Should matc
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
     },
-    "OriginAccessIdentityDF1E3CAC": {
+    "OriginAccessControl": {
       "Properties": {
-        "CloudFrontOriginAccessIdentityConfig": {
-          "Comment": "Allows CloudFront to reach the bucket",
+        "OriginAccessControlConfig": {
+          "Description": "Access Control",
+          "Name": "OriginAccessControlForContentsBucket",
+          "OriginAccessControlOriginType": "s3",
+          "SigningBehavior": "always",
+          "SigningProtocol": "sigv4",
         },
       },
-      "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+      "Type": "AWS::CloudFront::OriginAccessControl",
     },
     "OriginBucketCA772B8F": {
       "DeletionPolicy": "Retain",
@@ -60,7 +64,7 @@ exports[`SecureFrontendWebAppCloudFrontDistribution specific testing Should matc
               "Principal": {
                 "CanonicalUser": {
                   "Fn::GetAtt": [
-                    "OriginAccessIdentityDF1E3CAC",
+                    "SecureFrontendWebAppCloudFrontDistributionOrigin1S3Origin9D1A8EF3",
                     "S3CanonicalUserId",
                   ],
                 },
@@ -195,18 +199,14 @@ exports[`SecureFrontendWebAppCloudFrontDistribution specific testing Should matc
                 ],
               },
               "Id": "TestingStackSecureFrontendWebAppCloudFrontDistributionOrigin11EBA8679",
+              "OriginAccessControlId": {
+                "Fn::GetAtt": [
+                  "OriginAccessControl",
+                  "Id",
+                ],
+              },
               "S3OriginConfig": {
-                "OriginAccessIdentity": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "origin-access-identity/cloudfront/",
-                      {
-                        "Ref": "OriginAccessIdentityDF1E3CAC",
-                      },
-                    ],
-                  ],
-                },
+                "OriginAccessIdentity": "",
               },
             },
           ],
@@ -221,6 +221,14 @@ exports[`SecureFrontendWebAppCloudFrontDistribution specific testing Should matc
         },
       },
       "Type": "AWS::CloudFront::Distribution",
+    },
+    "SecureFrontendWebAppCloudFrontDistributionOrigin1S3Origin9D1A8EF3": {
+      "Properties": {
+        "CloudFrontOriginAccessIdentityConfig": {
+          "Comment": "Identity for TestingStackSecureFrontendWebAppCloudFrontDistributionOrigin11EBA8679",
+        },
+      },
+      "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
     },
   },
   "Rules": {
