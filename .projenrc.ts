@@ -28,8 +28,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['yicr'],
   },
   publishToPypi: {
-    distName: 'gammarer.aws-secure-frontend-web-app-cloudfront-distribution',
-    module: 'gammarer.aws_secure_frontend_web_app_cloudfront_distribution',
+    distName: 'gammarers.aws-secure-frontend-web-app-cloudfront-distribution',
+    module: 'gammarers.aws_secure_frontend_web_app_cloudfront_distribution',
   },
   publishToMaven: {
     mavenGroupId: 'com.gammarer',
