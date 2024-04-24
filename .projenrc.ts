@@ -32,8 +32,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     module: 'gammarers.aws_secure_frontend_web_app_cloudfront_distribution',
   },
   publishToNuget: {
-    dotNetNamespace: 'Gammarer.CDK.AWS',
-    packageId: 'Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution',
+    dotNetNamespace: 'Gammarers.CDK.AWS',
+    packageId: 'Gammarers.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution',
   },
 });
 project.synth();
