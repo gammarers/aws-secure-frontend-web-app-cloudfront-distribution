@@ -1,14 +1,13 @@
 # AWS Secure Frontend Web App CloudFront Distribution (for AWS CDK v2)
 
-[![GitHub](https://img.shields.io/github/license/gammarer/aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://github.com/gammarer/aws-secure-frontend-web-app-cloudfront-distribution/blob/main/LICENSE)
-[![npm (scoped)](https://img.shields.io/npm/v/@gammarer/aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://www.npmjs.com/package/@gammarer/aws-secure-frontend-web-app-cloudfront-distribution)
-[![PyPI](https://img.shields.io/pypi/v/gammarer.aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://pypi.org/project/gammarer.aws-secure-frontend-web-app-cloudfront-distribution/)
-[![Nuget](https://img.shields.io/nuget/v/Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution?style=flat-square)](https://www.nuget.org/packages/Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution/)
-[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.gammarer/aws-secure-frontend-web-app-cloudfront-distribution?server=https%3A%2F%2Fs01.oss.sonatype.org%2F&style=flat-square)](https://s01.oss.sonatype.org/content/repositories/releases/com/gammarer/aws-secure-frontend-web-app-cloudfront-distribution/)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/gammarer/aws-secure-frontend-web-app-cloudfront-distribution/release.yml?branch=main&label=release&style=flat-square)](https://github.com/gammarer/aws-secure-frontend-web-app-cloudfront-distribution/actions/workflows/release.yml)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/gammarer/aws-secure-frontend-web-app-cloudfront-distribution?sort=semver&style=flat-square)](https://github.com/gammarer/aws-secure-frontend-web-app-cloudfront-distribution/releases)
+[![GitHub](https://img.shields.io/github/license/gammarers/aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://github.com/gammarers/aws-secure-frontend-web-app-cloudfront-distribution/blob/main/LICENSE)
+[![npm (scoped)](https://img.shields.io/npm/v/@gammarers/aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://www.npmjs.com/package/@gammarers/aws-secure-frontend-web-app-cloudfront-distribution)
+[![PyPI](https://img.shields.io/pypi/v/gammarers.aws-secure-frontend-web-app-cloudfront-distribution?style=flat-square)](https://pypi.org/project/gammarers.aws-secure-frontend-web-app-cloudfront-distribution/)
+[![Nuget](https://img.shields.io/nuget/v/Gammarers.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution?style=flat-square)](https://www.nuget.org/packages/Gammarers.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution/)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/gammarers/aws-secure-frontend-web-app-cloudfront-distribution/release.yml?branch=main&label=release&style=flat-square)](https://github.com/gammarers/aws-secure-frontend-web-app-cloudfront-distribution/actions/workflows/release.yml)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/gammarers/aws-secure-frontend-web-app-cloudfront-distribution?sort=semver&style=flat-square)](https://github.com/gammarers/aws-secure-frontend-web-app-cloudfront-distribution/releases)
 
-[![View on Construct Hub](https://constructs.dev/badge?package=@gammarer/aws-secure-frontend-web-app-cloudfront-distribution)](https://constructs.dev/packages/@gammarer/aws-secure-frontend-web-app-cloudfront-distribution)
+[![View on Construct Hub](https://constructs.dev/badge?package=@gammarers/aws-secure-frontend-web-app-cloudfront-distribution)](https://constructs.dev/packages/@gammarers/aws-secure-frontend-web-app-cloudfront-distribution)
 
 AWS CloudFront distribution for frontend web app (spa) optimized.
 
@@ -17,32 +16,21 @@ AWS CloudFront distribution for frontend web app (spa) optimized.
 ### TypeScript
 
 ```shell
-npm install @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
+npm install @gammarers/aws-secure-frontend-web-app-cloudfront-distribution
 # or
-yarn add @gammarer/aws-secure-frontend-web-app-cloudfront-distribution
+yarn add @gammarers/aws-secure-frontend-web-app-cloudfront-distribution
 ```
 
 ### Python
 
 ```shell
-pip install gammarer.aws-secure-frontend-web-app-cloudfront-distribution
+pip install gammarers.aws-secure-frontend-web-app-cloudfront-distribution
 ```
 
 ### C# / .NET
 
 ```shell
-dotnet add package Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution
-```
-
-### Java
-
-Add the following to pom.xml:
-
-```xml
-<dependency>
-  <groupId>com.gammarer</groupId>
-  <artifactId>aws-secure-frontend-web-app-cloudfront-distribution</artifactId>
-</dependency>
+dotnet add package Gammarers.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution
 ```
 
 ## Example
@@ -50,7 +38,7 @@ Add the following to pom.xml:
 ### for Origin Access Control
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution, S3OriginAccessType } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution';
+import { SecureFrontendWebAppCloudFrontDistribution, S3OriginAccessType } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution';
 
 declare const originBucket: s3.Bucket;
 declare const accessLogBucket: s3.Bucket;
@@ -71,7 +59,7 @@ new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloud
 ### for Origin Access Identity
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution, S3OriginAccessType } from '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution';
+import { SecureFrontendWebAppCloudFrontDistribution, S3OriginAccessType } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution';
 
 declare const originBucket: s3.Bucket;
 declare const accessLogBucket: s3.Bucket;

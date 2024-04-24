@@ -9,9 +9,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiVersion: '5.2.x',
   defaultReleaseBranch: 'main',
   projenrcTs: true,
-  name: '@gammarer/aws-secure-frontend-web-app-cloudfront-distribution',
+  name: '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution',
   description: 'AWS CloudFront distribution for frontend web app (spa) optimized.',
-  repositoryUrl: 'https://github.com/gammarer/aws-secure-frontend-web-app-cloudfront-distribution.git',
+  repositoryUrl: 'https://github.com/gammarers/aws-secure-frontend-web-app-cloudfront-distribution.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 'spa', 'vue', 'angular', 'react'],
   npmAccess: javascript.NpmAccess.PUBLIC,
   majorVersion: 1,
@@ -28,18 +28,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['yicr'],
   },
   publishToPypi: {
-    distName: 'gammarer.aws-secure-frontend-web-app-cloudfront-distribution',
-    module: 'gammarer.aws_secure_frontend_web_app_cloudfront_distribution',
-  },
-  publishToMaven: {
-    mavenGroupId: 'com.gammarer',
-    javaPackage: 'com.gammarer.cdk.aws.secure_frontend_web_app_cloudfront_distribution',
-    mavenArtifactId: 'aws-secure-frontend-web-app-cloudfront-distribution',
-    mavenEndpoint: 'https://s01.oss.sonatype.org',
+    distName: 'gammarers.aws-secure-frontend-web-app-cloudfront-distribution',
+    module: 'gammarers.aws_secure_frontend_web_app_cloudfront_distribution',
   },
   publishToNuget: {
-    dotNetNamespace: 'Gammarer.CDK.AWS',
-    packageId: 'Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution',
+    dotNetNamespace: 'Gammarers.CDK.AWS',
+    packageId: 'Gammarers.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution',
   },
 });
 project.synth();
