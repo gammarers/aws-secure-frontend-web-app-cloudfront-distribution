@@ -31,12 +31,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'gammarers.aws-secure-frontend-web-app-cloudfront-distribution',
     module: 'gammarers.aws_secure_frontend_web_app_cloudfront_distribution',
   },
-  publishToMaven: {
-    mavenGroupId: 'com.gammarer',
-    javaPackage: 'com.gammarer.cdk.aws.secure_frontend_web_app_cloudfront_distribution',
-    mavenArtifactId: 'aws-secure-frontend-web-app-cloudfront-distribution',
-    mavenEndpoint: 'https://s01.oss.sonatype.org',
-  },
   publishToNuget: {
     dotNetNamespace: 'Gammarer.CDK.AWS',
     packageId: 'Gammarer.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution',
