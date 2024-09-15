@@ -115,7 +115,7 @@ the options for the behavior at this path.
 ##### `grant` <a name="grant" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant"></a>
 
 ```typescript
-public grant(identity: IGrantable, actions: string): Grant
+public grant(identity: IGrantable, actions: ...string[]): Grant
 ```
 
 Adds an IAM policy statement associated with this distribution to an IAM principal's policy.
@@ -130,7 +130,7 @@ The principal.
 
 ###### `actions`<sup>Required</sup> <a name="actions" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant.parameter.actions"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 The set of actions to allow (i.e. "cloudfront:ListInvalidations").
 
