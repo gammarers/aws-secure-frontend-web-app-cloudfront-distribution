@@ -13,7 +13,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/gammarers/aws-secure-frontend-web-app-cloudfront-distribution.git',
   keywords: ['aws', 'cdk', 'cloudfront', 'cdn', 'web', 'spa', 'vue', 'angular', 'react'],
   npmAccess: javascript.NpmAccess.PUBLIC,
-  majorVersion: 1,
+  majorVersion: 2,
   minNodeVersion: '16.0.0',
   workflowNodeVersion: '22.x',
   depsUpgradeOptions: {
