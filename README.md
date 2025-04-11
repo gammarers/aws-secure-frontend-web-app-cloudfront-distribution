@@ -15,9 +15,15 @@ AWS CloudFront distribution for frontend web app (spa) optimized.
 
 ### TypeScript
 
+#### npm
+
 ```shell
 npm install @gammarers/aws-secure-frontend-web-app-cloudfront-distribution
-# or
+```
+
+#### yarn
+
+```shell
 yarn add @gammarers/aws-secure-frontend-web-app-cloudfront-distribution
 ```
 
@@ -38,41 +44,17 @@ dotnet add package Gammarers.CDK.AWS.SecureFrontendWebAppCloudFrontDistribution
 ### for Origin Access Control
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistribution, S3OriginAccessType } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution';
+import { SecureFrontendWebAppCloudFrontDistribution } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution';
 
 declare const originBucket: s3.Bucket;
 declare const accessLogBucket: s3.Bucket;
 declare const certificate: acm.Certificate;
-declare const cfnOriginAccessControl: cloudfront.CfnOriginAccessControl
 
 new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
   comment: 'frontend web app distribution.', // optional
   accessLogBucket: accessLogBucket, // optional
   certificate: certificate,
   distributionDomainName: 'example.com',
-  s3OriginAccessType: S3OriginAccessType.ORIGIN_ACCESS_CONTROL,
-  originAccessControlId: cfnOriginAccessControl.attrId,
-  originBucket: originBucket,
-});
-```
-
-### for Origin Access Identity
-
-```typescript
-import { SecureFrontendWebAppCloudFrontDistribution, S3OriginAccessType } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution';
-
-declare const originBucket: s3.Bucket;
-declare const accessLogBucket: s3.Bucket;
-declare const certificate: acm.Certificate;
-declare const originAccessIdentity: cloudfront.OriginAccessIdentity;
-
-new SecureFrontendWebAppCloudFrontDistribution(stack, 'SecureFrontendWebAppCloudFrontDistribution', {
-  comment: 'frontend web app distribution.', // optional
-  accessLogBucket: accessLogBucket, // optional
-  certificate: certificate,
-  distributionDomainName: 'example.com',
-  s3OriginAccessType: S3OriginAccessType.ORIGIN_ACCESS_IDENTITY,
-  originAccessIdentity: originAccessIdentity,
   originBucket: originBucket,
 });
 ```
