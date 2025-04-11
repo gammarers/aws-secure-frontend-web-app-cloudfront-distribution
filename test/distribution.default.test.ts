@@ -1,9 +1,8 @@
 import { Stack, App } from 'aws-cdk-lib';
 import { Match, Template } from 'aws-cdk-lib/assertions';
 import * as acm from 'aws-cdk-lib/aws-certificatemanager';
-import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-import { S3OriginAccessType, SecureFrontendWebAppCloudFrontDistribution } from '../src';
+import { SecureFrontendWebAppCloudFrontDistribution } from '../src';
 
 describe('SecureFrontendWebAppCloudFrontDistribution default testing', () => {
   const app = new App();
@@ -13,8 +12,6 @@ describe('SecureFrontendWebAppCloudFrontDistribution default testing', () => {
       domainName: 'example.com',
     }),
     domainName: 'example.com',
-    s3OriginAccessType: S3OriginAccessType.ORIGIN_ACCESS_IDENTITY,
-    originAccessIdentity: new cloudfront.OriginAccessIdentity(stack, 'OriginAccessIdentity'),
     originBucket: new s3.Bucket(stack, 'OriginBucket'),
   });
 
@@ -73,18 +70,14 @@ describe('SecureFrontendWebAppCloudFrontDistribution default testing', () => {
               ],
             },
             Id: Match.stringLikeRegexp('TestingStackSecureFrontendWebAppCloudFrontDistributionOrigin.*'),
+            OriginAccessControlId: {
+              'Fn::GetAtt': [
+                Match.stringLikeRegexp('SecureFrontendWebAppCloudFrontDistributionOrigin1S3OriginAccessControl'),
+                'Id',
+              ],
+            },
             S3OriginConfig: {
-              OriginAccessIdentity: {
-                'Fn::Join': [
-                  '',
-                  [
-                    'origin-access-identity/cloudfront/',
-                    {
-                      Ref: Match.stringLikeRegexp('OriginAccessIdentity.*'),
-                    },
-                  ],
-                ],
-              },
+              OriginAccessIdentity: '',
             },
           },
         ]),
