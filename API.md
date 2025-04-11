@@ -9,14 +9,14 @@
 ```typescript
 import { SecureFrontendWebAppCloudFrontDistribution } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution'
 
-new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps | SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps)
+new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, props: SecureFrontendWebAppCloudFrontDistributionProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps</a> \| <a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a></code> | *No description.* |
 
 ---
 
@@ -34,7 +34,7 @@ new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, pro
 
 ##### `props`<sup>Required</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps</a> | <a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps">SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps</a>
+- *Type:* <a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps">SecureFrontendWebAppCloudFrontDistributionProps</a>
 
 ---
 
@@ -45,8 +45,24 @@ new SecureFrontendWebAppCloudFrontDistribution(scope: Construct, id: string, pro
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.addBehavior">addBehavior</a></code> | Adds a new behavior to this distribution for the given pathPattern. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.attachWebAclId">attachWebAclId</a></code> | Attach WAF WebACL to this CloudFront distribution. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant">grant</a></code> | Adds an IAM policy statement associated with this distribution to an IAM principal's policy. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grantCreateInvalidation">grantCreateInvalidation</a></code> | Grant to create invalidations for this bucket to an IAM principal (Role/Group/User). |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric">metric</a></code> | Return the given named metric for this Distribution. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric401ErrorRate">metric401ErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 401. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric403ErrorRate">metric403ErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 403. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric404ErrorRate">metric404ErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 404. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric4xxErrorRate">metric4xxErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 4xx. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric502ErrorRate">metric502ErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 502. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric503ErrorRate">metric503ErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 503. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric504ErrorRate">metric504ErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 504. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric5xxErrorRate">metric5xxErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 5xx. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricBytesDownloaded">metricBytesDownloaded</a></code> | Metric for the total number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricBytesUploaded">metricBytesUploaded</a></code> | Metric for the total number of bytes that viewers uploaded to your origin with CloudFront, using POST and PUT requests. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricCacheHitRate">metricCacheHitRate</a></code> | Metric for the percentage of all cacheable requests for which CloudFront served the content from its cache. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricOriginLatency">metricOriginLatency</a></code> | Metric for the total time spent from when CloudFront receives a request to when it starts providing a response to the network (not the viewer), for requests that are served from the origin, not the CloudFront cache. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricRequests">metricRequests</a></code> | Metric for the total number of viewer requests received by CloudFront, for all HTTP methods and for both HTTP and HTTPS requests. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricTotalErrorRate">metricTotalErrorRate</a></code> | Metric for the percentage of all viewer requests for which the response's HTTP status code is 4xx or 5xx. |
 
 ---
 
@@ -112,6 +128,24 @@ the options for the behavior at this path.
 
 ---
 
+##### `attachWebAclId` <a name="attachWebAclId" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.attachWebAclId"></a>
+
+```typescript
+public attachWebAclId(webAclId: string): void
+```
+
+Attach WAF WebACL to this CloudFront distribution.
+
+WebACL must be in the us-east-1 region
+
+###### `webAclId`<sup>Required</sup> <a name="webAclId" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.attachWebAclId.parameter.webAclId"></a>
+
+- *Type:* string
+
+The WAF WebACL to associate with this distribution.
+
+---
+
 ##### `grant` <a name="grant" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.grant"></a>
 
 ```typescript
@@ -149,6 +183,242 @@ Grant to create invalidations for this bucket to an IAM principal (Role/Group/Us
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 The principal.
+
+---
+
+##### `metric` <a name="metric" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric"></a>
+
+```typescript
+public metric(metricName: string, props?: MetricOptions): Metric
+```
+
+Return the given named metric for this Distribution.
+
+###### `metricName`<sup>Required</sup> <a name="metricName" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric.parameter.metricName"></a>
+
+- *Type:* string
+
+---
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric401ErrorRate` <a name="metric401ErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric401ErrorRate"></a>
+
+```typescript
+public metric401ErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 401.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric401ErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric403ErrorRate` <a name="metric403ErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric403ErrorRate"></a>
+
+```typescript
+public metric403ErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 403.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric403ErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric404ErrorRate` <a name="metric404ErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric404ErrorRate"></a>
+
+```typescript
+public metric404ErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 404.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric404ErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric4xxErrorRate` <a name="metric4xxErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric4xxErrorRate"></a>
+
+```typescript
+public metric4xxErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 4xx.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric4xxErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric502ErrorRate` <a name="metric502ErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric502ErrorRate"></a>
+
+```typescript
+public metric502ErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 502.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric502ErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric503ErrorRate` <a name="metric503ErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric503ErrorRate"></a>
+
+```typescript
+public metric503ErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 503.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric503ErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric504ErrorRate` <a name="metric504ErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric504ErrorRate"></a>
+
+```typescript
+public metric504ErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 504.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric504ErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metric5xxErrorRate` <a name="metric5xxErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric5xxErrorRate"></a>
+
+```typescript
+public metric5xxErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 5xx.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metric5xxErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metricBytesDownloaded` <a name="metricBytesDownloaded" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricBytesDownloaded"></a>
+
+```typescript
+public metricBytesDownloaded(props?: MetricOptions): Metric
+```
+
+Metric for the total number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricBytesDownloaded.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metricBytesUploaded` <a name="metricBytesUploaded" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricBytesUploaded"></a>
+
+```typescript
+public metricBytesUploaded(props?: MetricOptions): Metric
+```
+
+Metric for the total number of bytes that viewers uploaded to your origin with CloudFront, using POST and PUT requests.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricBytesUploaded.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metricCacheHitRate` <a name="metricCacheHitRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricCacheHitRate"></a>
+
+```typescript
+public metricCacheHitRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all cacheable requests for which CloudFront served the content from its cache.
+
+HTTP POST and PUT requests, and errors, are not considered cacheable requests.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricCacheHitRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metricOriginLatency` <a name="metricOriginLatency" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricOriginLatency"></a>
+
+```typescript
+public metricOriginLatency(props?: MetricOptions): Metric
+```
+
+Metric for the total time spent from when CloudFront receives a request to when it starts providing a response to the network (not the viewer), for requests that are served from the origin, not the CloudFront cache.
+
+This is also known as first byte latency, or time-to-first-byte.
+
+To obtain this metric, you need to set `publishAdditionalMetrics` to `true`.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricOriginLatency.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metricRequests` <a name="metricRequests" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricRequests"></a>
+
+```typescript
+public metricRequests(props?: MetricOptions): Metric
+```
+
+Metric for the total number of viewer requests received by CloudFront, for all HTTP methods and for both HTTP and HTTPS requests.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricRequests.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
+
+---
+
+##### `metricTotalErrorRate` <a name="metricTotalErrorRate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricTotalErrorRate"></a>
+
+```typescript
+public metricTotalErrorRate(props?: MetricOptions): Metric
+```
+
+Metric for the percentage of all viewer requests for which the response's HTTP status code is 4xx or 5xx.
+
+###### `props`<sup>Optional</sup> <a name="props" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.metricTotalErrorRate.parameter.props"></a>
+
+- *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
@@ -248,6 +518,7 @@ Creates a Distribution construct that represents an external (imported) distribu
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionArn">distributionArn</a></code> | <code>string</code> | The distribution ARN for this distribution. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionDomainName">distributionDomainName</a></code> | <code>string</code> | The domain name of the Distribution, such as d111111abcdef8.cloudfront.net. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionId">distributionId</a></code> | <code>string</code> | The distribution ID for this distribution. |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.domainName">domainName</a></code> | <code>string</code> | The domain name of the Distribution, such as d111111abcdef8.cloudfront.net. |
@@ -297,6 +568,18 @@ The stack in which this resource is defined.
 
 ---
 
+##### `distributionArn`<sup>Required</sup> <a name="distributionArn" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionArn"></a>
+
+```typescript
+public readonly distributionArn: string;
+```
+
+- *Type:* string
+
+The distribution ARN for this distribution.
+
+---
+
 ##### `distributionDomainName`<sup>Required</sup> <a name="distributionDomainName" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistribution.property.distributionDomainName"></a>
 
 ```typescript
@@ -336,31 +619,29 @@ The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps <a name="SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps"></a>
+### SecureFrontendWebAppCloudFrontDistributionProps <a name="SecureFrontendWebAppCloudFrontDistributionProps" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps"></a>
 
-#### Initializer <a name="Initializer" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.Initializer"></a>
 
 ```typescript
-import { SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution'
+import { SecureFrontendWebAppCloudFrontDistributionProps } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution'
 
-const secureFrontendWebAppCloudFrontDistributionOriginAccessControlProps: SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps = { ... }
+const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloudFrontDistributionProps = { ... }
 ```
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originAccessControlId">originAccessControlId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.s3OriginAccessType">s3OriginAccessType</a></code> | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a></code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `certificate`<sup>Required</sup> <a name="certificate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.certificate"></a>
+##### `certificate`<sup>Required</sup> <a name="certificate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -370,7 +651,7 @@ public readonly certificate: ICertificate;
 
 ---
 
-##### `domainName`<sup>Required</sup> <a name="domainName" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.domainName"></a>
+##### `domainName`<sup>Required</sup> <a name="domainName" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.domainName"></a>
 
 ```typescript
 public readonly domainName: string;
@@ -380,17 +661,7 @@ public readonly domainName: string;
 
 ---
 
-##### `originAccessControlId`<sup>Required</sup> <a name="originAccessControlId" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originAccessControlId"></a>
-
-```typescript
-public readonly originAccessControlId: string;
-```
-
-- *Type:* string
-
----
-
-##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.originBucket"></a>
+##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket"></a>
 
 ```typescript
 public readonly originBucket: IBucket;
@@ -400,17 +671,7 @@ public readonly originBucket: IBucket;
 
 ---
 
-##### `s3OriginAccessType`<sup>Required</sup> <a name="s3OriginAccessType" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.s3OriginAccessType"></a>
-
-```typescript
-public readonly s3OriginAccessType: S3OriginAccessType;
-```
-
-- *Type:* <a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a>
-
----
-
-##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.accessLogBucket"></a>
+##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket"></a>
 
 ```typescript
 public readonly accessLogBucket: IBucket;
@@ -420,101 +681,7 @@ public readonly accessLogBucket: IBucket;
 
 ---
 
-##### `comment`<sup>Optional</sup> <a name="comment" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessControlProps.property.comment"></a>
-
-```typescript
-public readonly comment: string;
-```
-
-- *Type:* string
-
----
-
-### SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps <a name="SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps"></a>
-
-#### Initializer <a name="Initializer" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.Initializer"></a>
-
-```typescript
-import { SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps } from '@gammarers/aws-secure-frontend-web-app-cloudfront-distribution'
-
-const secureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps: SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps = { ... }
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.domainName">domainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originAccessIdentity">originAccessIdentity</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.s3OriginAccessType">s3OriginAccessType</a></code> | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a></code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
-
----
-
-##### `certificate`<sup>Required</sup> <a name="certificate" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.certificate"></a>
-
-```typescript
-public readonly certificate: ICertificate;
-```
-
-- *Type:* aws-cdk-lib.aws_certificatemanager.ICertificate
-
----
-
-##### `domainName`<sup>Required</sup> <a name="domainName" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.domainName"></a>
-
-```typescript
-public readonly domainName: string;
-```
-
-- *Type:* string
-
----
-
-##### `originAccessIdentity`<sup>Required</sup> <a name="originAccessIdentity" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originAccessIdentity"></a>
-
-```typescript
-public readonly originAccessIdentity: IOriginAccessIdentity;
-```
-
-- *Type:* aws-cdk-lib.aws_cloudfront.IOriginAccessIdentity
-
----
-
-##### `originBucket`<sup>Required</sup> <a name="originBucket" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.originBucket"></a>
-
-```typescript
-public readonly originBucket: IBucket;
-```
-
-- *Type:* aws-cdk-lib.aws_s3.IBucket
-
----
-
-##### `s3OriginAccessType`<sup>Required</sup> <a name="s3OriginAccessType" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.s3OriginAccessType"></a>
-
-```typescript
-public readonly s3OriginAccessType: S3OriginAccessType;
-```
-
-- *Type:* <a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType">S3OriginAccessType</a>
-
----
-
-##### `accessLogBucket`<sup>Optional</sup> <a name="accessLogBucket" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.accessLogBucket"></a>
-
-```typescript
-public readonly accessLogBucket: IBucket;
-```
-
-- *Type:* aws-cdk-lib.aws_s3.IBucket
-
----
-
-##### `comment`<sup>Optional</sup> <a name="comment" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionOriginAccessIdentityProps.property.comment"></a>
+##### `comment`<sup>Optional</sup> <a name="comment" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment"></a>
 
 ```typescript
 public readonly comment: string;
@@ -525,26 +692,4 @@ public readonly comment: string;
 ---
 
 
-
-## Enums <a name="Enums" id="Enums"></a>
-
-### S3OriginAccessType <a name="S3OriginAccessType" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType"></a>
-
-#### Members <a name="Members" id="Members"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_IDENTITY">ORIGIN_ACCESS_IDENTITY</a></code> | *No description.* |
-| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_CONTROL">ORIGIN_ACCESS_CONTROL</a></code> | *No description.* |
-
----
-
-##### `ORIGIN_ACCESS_IDENTITY` <a name="ORIGIN_ACCESS_IDENTITY" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_IDENTITY"></a>
-
----
-
-
-##### `ORIGIN_ACCESS_CONTROL` <a name="ORIGIN_ACCESS_CONTROL" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.S3OriginAccessType.ORIGIN_ACCESS_CONTROL"></a>
-
----
 
