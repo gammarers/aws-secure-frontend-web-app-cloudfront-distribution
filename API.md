@@ -638,6 +638,7 @@ const secureFrontendWebAppCloudFrontDistributionProps: SecureFrontendWebAppCloud
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.originBucket">originBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.accessLogBucket">accessLogBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
 | <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.comment">comment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.priceClass">priceClass</a></code> | <code>aws-cdk-lib.aws_cloudfront.PriceClass</code> | *No description.* |
 
 ---
 
@@ -688,6 +689,16 @@ public readonly comment: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `priceClass`<sup>Optional</sup> <a name="priceClass" id="@gammarers/aws-secure-frontend-web-app-cloudfront-distribution.SecureFrontendWebAppCloudFrontDistributionProps.property.priceClass"></a>
+
+```typescript
+public readonly priceClass: PriceClass;
+```
+
+- *Type:* aws-cdk-lib.aws_cloudfront.PriceClass
 
 ---
 
