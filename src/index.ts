@@ -11,6 +11,7 @@ export interface SecureFrontendWebAppCloudFrontDistributionProps {
   readonly certificate: acm.ICertificate;
   readonly originBucket: s3.IBucket;
   readonly accessLogBucket?: s3.IBucket;
+  readonly priceClass?: cloudfront.PriceClass;
 }
 
 export class SecureFrontendWebAppCloudFrontDistribution extends cloudfront.Distribution {
@@ -92,7 +93,7 @@ export class SecureFrontendWebAppCloudFrontDistribution extends cloudfront.Distr
           responsePagePath: '/index.html',
         },
       ],
-      priceClass: cloudfront.PriceClass.PRICE_CLASS_ALL,
+      priceClass: props.priceClass ?? cloudfront.PriceClass.PRICE_CLASS_ALL,
     });
   }
 }
